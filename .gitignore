@@ -1,0 +1,15 @@
+# Ignorar variables de entorno (credenciales, tokens, etc.)
+.env
+
+# Ignorar dependencias instaladas con npm
+node_modules/
+
+# Ignorar archivos de log
+*.log
+
+# Ignorar archivos del sistema (Windows / macOS)
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos temporales
+*.tmp
