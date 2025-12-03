@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 // ❌ no usamos app.use(express.json()) global para no romper multipart
-app.use(express.static(path.join(__dirname, "Public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Configuración de multer para recibir solo PDFs
 const upload = multer({
@@ -260,11 +260,12 @@ app.post("/api/login", express.json(), (req, res) => {
 
 // Servir HTML principal
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "Public", "Index.html"));
+  res.sendFile(path.join(__dirname, "public", "Index.html"));
 });
 
 // 🚀 El listen SIEMPRE va al final
 app.listen(PORT, () => {
   console.log(`✅ Servidor corriendo en http://localhost:${PORT}`);
 }); 
+
 
